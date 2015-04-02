@@ -3,7 +3,8 @@ LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := mkbootimg.c
-LOCAL_STATIC_LIBRARIES := libmincrypt
+LOCAL_STATIC_LIBRARIES := libfdt libmincrypt
+LOCAL_C_INCLUDES := $(LOCAL_PATH)/libfdt
 LOCAL_CFLAGS := -Werror
 
 LOCAL_MODULE := mkbootimg
@@ -17,7 +18,8 @@ include $(BUILD_HOST_EXECUTABLE)
 
 include $(CLEAR_VARS)
 LOCAL_SRC_FILES := mkbootimg.c
-LOCAL_STATIC_LIBRARIES := libmincrypt libcutils libc
+LOCAL_STATIC_LIBRARIES := libfdt libmincrypt libcutils libc
+LOCAL_C_INCLUDES := $(LOCAL_PATH)/libfdt
 LOCAL_MODULE := utility_mkbootimg
 LOCAL_MODULE_TAGS := eng
 LOCAL_MODULE_STEM := mkbootimg
@@ -41,3 +43,4 @@ include $(BUILD_EXECUTABLE)
 
 $(call dist-for-goals,dist_files,$(LOCAL_BUILT_MODULE))
 
+include $(LOCAL_PATH)/libfdt/Android.mk
