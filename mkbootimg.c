@@ -17,6 +17,7 @@
 **
 ** June 2014, Ketut Putu Kumajaya
 ** Modified for Samsung Exynos DTBH, based on mkqcdtbootimg from Sony
+** change to exyons5433 korean N910 by loogeo
 */
 
 #include <stdio.h>
@@ -40,12 +41,12 @@
 /* DTBH */
 #define DTBH_MAGIC         "DTBH"
 #define DTBH_VERSION       2
-#define DTBH_PLATFORM      "tre3calte"
-#define DTBH_SUBTYPE       "tre3calte_kor_open"
+#define DTBH_PLATFORM      "trelte_kor"
+#define DTBH_SUBTYPE       "trelte_kor_open"
 
 /* DTBH Hardcoded entry */
-#define DTBH_PLATFORM_CODE 0x5f43
-#define DTBH_SUBTYPE_CODE  0x07735753
+#define DTBH_PLATFORM_CODE 0x3ec3
+#define DTBH_SUBTYPE_CODE  0xae525f37
 
 struct dt_blob;
 
