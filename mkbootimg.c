@@ -41,7 +41,7 @@
 /* DTBH */
 #define DTBH_MAGIC         "DTBH"
 #define DTBH_VERSION       2
-#define DTBH_PLATFORM      "trelte_kor"
+#define DTBH_PLATFORM      "trelte"
 #define DTBH_SUBTYPE       "trelte_kor_open"
 
 /* DTBH Hardcoded entry */
